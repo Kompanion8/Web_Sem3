@@ -1,0 +1,64 @@
+<html>
+	<meta charset="utf-8">
+	<head>
+	</head>
+	<body>
+		<script>
+			while (true) {
+			var numbas = []
+			for (let i = 0; i < 15; i++) {
+				let k = Math.floor(Math.random() * 40) - 10
+				numbas.push(k)
+				}
+			let n = parseInt(prompt(numbas))
+			if (n == 0) {
+				break;
+				}
+			}
+			var mumbs = []
+			
+			for (let j = 0; j < numbas.length; j++){
+				if (numbas[j] < 0){
+					mumbs[j] = numbas[j] * numbas[j]
+				}
+				else{
+					mumbs.push(numbas[j])
+				}
+			}
+			alert(mumbs)
+			
+			let s1 = 0
+			let s2 = 0
+			let c1 = 0
+			let c2 = 0
+			for (let m = 0; m < numbas.length; m++) {
+				if (numbas[m] < 0) {
+					s1+=numbas[m]
+					c1++
+				}
+				else {
+					s2+=numbas[m]
+					c2++
+				}
+			}
+			alert(s1)
+			alert(s2)
+			alert(Math.floor(s2/c2))
+			alert(Math.floor(s1/c1))
+			
+		</script>
+		<script>
+			let cols = []
+			let count = 0
+			for (let i = 0; i<10; i++){
+				let k = Math.floor(Math.random() * 3)
+				cols.push(k)
+				if (k == 0) {
+					count ++
+				}
+			}
+			alert(cols)
+			alert(count)
+		</script>
+	</body>
+</html>

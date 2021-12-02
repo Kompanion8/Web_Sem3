@@ -1,0 +1,79 @@
+<html>
+	<meta charser="utf-8">
+	<head>
+	</head>
+	<body>
+		<script>
+			var o = 0
+			var a = Math.floor(Math.random() * 4) + 1
+			var ao = prompt("Введите число от 1 до 5")
+			if (ao == a) {
+				alert("Верно! Загаданное число было " + a)
+				o += 1
+			}
+			else {
+				alert("Неверно! Загаданное число было " + a)
+			}
+			var b = Math.floor(Math.random() * 9) + 1
+			var bo = prompt("Введите число от 1 до 10")
+			if (bo == b) {
+				alert("Верно! Загаданное число было " + b)
+				o += 1
+			}
+			else {
+				alert("Неверно! Загаданное число было " + b)
+			}
+			if (o < 2) {
+				alert("Вы угадали "+o+" раз")
+			}
+			else {
+				alert("Вы угадали "+o+" раза")
+			}
+		</script>
+		<script>
+			for (let i = 1; i < 11; i++) {
+				alert("Внимание! "+i)
+			}
+		</script>
+		<script>
+			while (true) {
+				let otv = parseInt(prompt("Мадс, ещё по одной?"))
+				if (otv == 1){
+					break
+				}
+			}
+		</script>
+		<script>
+			let numb = parseInt(prompt("Введите ваш порядковый номер в журнале"))
+			let bmun = 1
+			for (var j = 1; j<(numb+1); j++) {
+				bmun *= j
+			}
+			alert(bmun)
+		</script>
+		<script>
+			let fam = prompt("Введите вашу фамилию")
+			let maf = fam.toLowerCase().split("").reverse().join("")
+			if (maf == fam.toLowerCase()) {
+				alert("Ваша фамилия полиндром!")
+			}
+			else{
+				alert("Ваша фамилия not полиндром!")
+			}
+		</script>
+		<script>
+			let n = parseInt(prompt("Введите ваш порядковый номер в журнале"));
+			let ku = 0
+			for (let i = 2; i <= n; i++) { 
+				ku = 0
+				for (let j = 2; j < i; j++) { 
+					if (i % j == 0) {
+					ku+=1
+					}
+				}
+			if (ku == 0) alert( i );
+				
+			}
+		</script>
+	</body>
+</html>
