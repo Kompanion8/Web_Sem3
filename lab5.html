@@ -1,0 +1,129 @@
+<html>
+	<meta charset="1251">
+	<head>
+	</head>
+	<body>
+		<script>
+			function showMessage() {
+			let message = "Привет, я JavaScript!";
+
+			alert( message );
+			}
+
+			showMessage(); 
+
+			alert( message );
+
+		</script>
+		<script>
+
+			let fam = prompt("Введите строку")
+
+			let maf = fam.toLowerCase().split("").reverse().join("")
+
+			if (maf == fam.toLowerCase()) {
+
+				alert("Ваша строка полиндром!")
+
+			}
+
+			else{
+
+				alert("Ваша строка не полиндром!")
+
+			}
+
+		</script>
+		<script>
+
+			var numbas = []
+
+			for (let i = 0; i < 15; i++) {
+
+				let k = Math.floor(Math.random() * 40) - 10
+
+				numbas.push(k)
+
+				}
+			alert("Массив: "+numbas)
+			
+			var mumbs = []
+
+		
+			for (let j = 0; j < numbas.length; j++){
+
+				if (numbas[j] < 0){
+
+					mumbs[j] = numbas[j] * numbas[j]
+
+				}
+
+				else{
+
+					mumbs.push(numbas[j])
+
+				}
+
+			}
+
+			alert("Массив без отрицательных: "+mumbs)
+			
+		</script>
+		<script>
+			class namecollector {
+				constructor(name){
+					this.name = name	
+				}
+				chngname(name){
+					this.name = name
+				}
+				printname(){
+					if (this.name.lenght != 0) {
+						alert("Ваше имя "+this.name)
+					}
+					else {
+						alert("Имя ещё не получено!")
+					}
+				}
+			}
+			
+			let newname = new namecollector(prompt("Введите ваше имя!"))
+			newname.printname()
+		</script>
+		<script>
+			class User {
+
+				constructor(username) {
+					this.username = username;
+				}
+
+				Hello() {
+					alert("Привет, " + this.username + "!");
+				}
+			}
+
+			let first_name = prompt("Введите своё имя имя");
+
+			let user_class = new User(first_name);
+			user_class.Hello();
+
+		</script>
+		<script>
+			class Flip {
+
+				constructor(username) {
+					this.username = username;
+				}
+
+				reverse_name() {
+					return this.username.split("").reverse().join("");
+				}
+			}
+
+			let class_username = new Flip(String(prompt("Введите своё имя имя")));
+
+			alert("Ваше перевёрнутое имя: " + class_username.reverse_name());
+		
+		</script>
+	</body>
+</html>

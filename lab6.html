@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div align="center">
+
+        <h3>Стрелочные функции в Javascript</h3>
+		<script>
+			alert("Генерация случайынх чисел")
+
+			let summarity = (a, b) => a + b;
+			let multplic = (a, b) => a * b;
+			let divsn = (a, b) => a / b;
+			let diff = (a, b) => a - b;
+
+			let rand_num = (min, max) => parseInt(summarity(multplic(Math.random(), (diff(max, min))), min));
+
+			x1 = rand_num(1, 101);
+			x2 = rand_num(1, 101);
+
+			alert(summarity(summarity(summarity(summarity("Числа: ", x1), " и "), x2), "."));
+
+			alert(summarity(summarity(summarity(summarity(summarity(summarity(summarity(summarity("Сумма: ", summarity(x1, x2)), ". Разность: "), diff(x1, x2)), ". Произведение: "), multplic(x1, x2)), ". И деление: "), divsn(x1, x2)), "."));
+		</script>
+		<script>
+        alert("Проверка условий тестовых заданий")
+
+			let count_an = prompt("Сколько вариантов ответа должно быть?", 4)
+			let score = prompt("Какое количество баллов необходимо за правильный ответ?", 1)
+			let topics = prompt("На какую тему составляете задание?", "Web-программирование")
+
+			let tests = (count_an <= 4) ?
+				() => alert('Количество вариантов ответа подходит.') :
+				() => alert("Пересмотрите ещё раз регламенты составления заданий.");
+			
+			let final_res = (score <= 1) ?
+				() => alert("Балльность соответствует норме.") :
+				() => alert("Пересмотрите ещё раз регламенты составления бальности.");
+			
+			let main_topic = (topics == "Web-программирование") ?
+				() => alert("Тема принята.") :
+				() => alert("Введённая тема здесь не рассматривается, используйте другую.");
+			
+			tests();
+			final_res();
+			main_topic();
+		</script>
+		<script>
+			alert("Проверка фамилии на полиндром.");
+			lst_name = prompt("Введите свою фамилию:");
+
+			let palind = (s_fam) => {
+				(s_fam.toLowerCase() == s_fam.toLowerCase().split('').reverse().join('')) ?
+					alert("Да, это - палиндром") :
+					alert("Нет, это - не палиндром");
+			};
+
+			palind(lst_name);
+		</script>
+		<script>
+			alert("Приступим к вычислению среднего значения... но для этого сгенерируем наш массив.")
+
+			let rand_num = (min, max) => (parseInt(Math.random() * (max - min) + min));
+
+			let rand_arr = [];
+			for (let i = 0; i <= (rand_num(15, 30)); i++) {
+				rand_arr.push(rand_num(i, rand_num(100, 548)));
+			};
+
+			alert("Процесс генерации завершён... вот массив длины " + rand_arr.length + " : " + rand_arr);
+
+			let aver_elem = (arr) => {
+				summarity = 0;
+				for (let i = 0; i < arr.length; i++) { summarity += arr[i] };
+				return (summarity / arr.length)
+			};
+
+			alert("Среднее значение данных получившегося массива равно: " + aver_elem(rand_arr));
+		</script>
+		<script>
+			alert("Считаем, сколько дней осталось до Нового Года!");
+
+			let now = new Date;
+
+			let options = {
+				millenia: "long",
+				years: "numeric",
+				months: "long",
+				days: "numeric",
+				weekday: "long",
+				timezone: "UTC",
+				hours: "numeric",
+				minutes: "numeric",
+				seconds: "numeric"
+			};
+
+			alert("Сейчас в Москве - " + now.toLocaleString("ru", options) + ".");
+
+			let daycount = () => (Math.ceil(((+new Date(2022 - 1, 12, 1, 0, 0, 0, 0)) - (+new Date)) / (1000 * 3600 * 24)));
+
+			let days_to_new_year = daycount();
+
+			alert("До Нового 2022 Года осталось " + days_to_new_year + " дней(я).");
+
+		</script>
+    </div>
+</body>
+
+</html>
